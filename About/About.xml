@@ -1,0 +1,34 @@
+<ModMetaData>
+	<name>Vanilla Cooking Expanded - Bakery</name>
+	<author>Sarg Bjornson, Oskar Potocki, Chowder, Isorex</author>
+	<supportedVersions>
+		<li>1.6</li>
+	</supportedVersions>
+	<modIconPath IgnoreIfNoMatchingField="True">UI/VELogo</modIconPath>
+	<modDependencies>
+		<li>
+			<packageId>brrainz.harmony</packageId>
+			<displayName>Harmony</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+			<downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+		</li>
+		<li>
+			<packageId>OskarPotocki.VanillaFactionsExpanded.Core</packageId>
+			<displayName>Vanilla Expanded Framework</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2023507013</steamWorkshopUrl>
+			<downloadUrl>https://github.com/Vanilla-Expanded/VanillaExpandedFramework</downloadUrl>
+		</li>
+		<li>
+			<packageId>VanillaExpanded.VCookE</packageId>
+			<displayName>Vanilla Cooking Expanded</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2134308519</steamWorkshopUrl>
+			<downloadUrl>https://github.com/Vanilla-Expanded/VanillaCookingExpanded</downloadUrl>
+		</li>
+	</modDependencies>
+	<loadAfter>
+		
+		<li>VanillaExpanded.VCookE</li>
+	</loadAfter>
+	<packageId>VanillaExpanded.VCookEBakery</packageId>
+	<description></description>
+</ModMetaData>

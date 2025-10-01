@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<PipeSystem.ProcessDef>
+		<defName>VCE_BakeSimpleConfection</defName>
+		<label>Bake simple confection</label>
+		<description>Turns 40 flour and 10 sugar into 4 simple confections.</description>
+		<labelOverride>Turn 40 flour and 10 sugar into 4 simple confections.</labelOverride>
+		<priorityInBillList>0</priorityInBillList>
+		<spawnOnInteractionCell>true</spawnOnInteractionCell>
+		<useIngredients>true</useIngredients>
+		<ingredients>
+			<li>
+				<thing>VCE_Flour</thing>
+				<countNeeded>40</countNeeded>
+			</li>
+			<li>
+				<thing>VCE_RawSugar</thing>
+				<countNeeded>10</countNeeded>
+			</li>
+		</ingredients>
+		<ticks>1200</ticks>
+		<results>
+			<li>
+				<thing>VCE_SimpleConfection</thing>
+				<count>4</count>
+			</li>
+		</results>
+		<noPowerDestroysProgress>true</noPowerDestroysProgress>
+		<noPowerDestroysMessage>VCE_OvenFailurePower</noPowerDestroysMessage>
+		<noPowerDestroysInitialWarning>VCE_OvenFailurePowerWarning</noPowerDestroysInitialWarning>
+		<autoExtract>false</autoExtract>
+	</PipeSystem.ProcessDef>
+	
+	
+</Defs>

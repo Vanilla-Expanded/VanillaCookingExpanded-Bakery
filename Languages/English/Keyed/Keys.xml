@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+	<VCE_OvenFailurePower>The confections have spoiled due to a lack of fuel or power in the bakery oven</VCE_OvenFailurePower>
+	<VCE_OvenFailurePowerWarning>The confections are spoiling fast due to a lack of fuel or power in the bakery oven</VCE_OvenFailurePowerWarning>
+	<VCE_BakeryOvenNotWorking>This bakery oven is not working at the moment</VCE_BakeryOvenNotWorking>
+	<VCE_Reset>Reset</VCE_Reset>
+	<VCE_SimpleMealMood>Max negative memory removed by simple confections</VCE_SimpleMealMood>
+	<VCE_SimpleMealMoodDesc>Ingesting a simple confection will remove a negative memory up to this severity. -3 by default. 0 will disable the mechanic for that meal.</VCE_SimpleMealMoodDesc>
+	<VCE_FineMealMood>Max negative memory removed by fine confections</VCE_FineMealMood>
+	<VCE_FineMealMoodDesc>Ingesting a fine confection will remove a negative memory up to this severity. -5 by default. 0 will disable the mechanic for that meal.</VCE_FineMealMoodDesc>
+	<VCE_LavishMealMood>Max negative memory removed by lavish confections</VCE_LavishMealMood>
+	<VCE_LavishMealMoodDesc>Ingesting a lavish confection will remove a negative memory up to this severity. -10 by default. 0 will disable the mechanic for that meal.</VCE_LavishMealMoodDesc>
+	<VCE_GourmetMealMood>Max negative memory removed by gourmet confections</VCE_GourmetMealMood>
+	<VCE_GourmetMealMoodDesc>Ingesting a gourmet confection will remove a negative memory up to this severity. -15 by default. 0 will disable the mechanic for that meal.</VCE_GourmetMealMoodDesc>
+</LanguageData>
