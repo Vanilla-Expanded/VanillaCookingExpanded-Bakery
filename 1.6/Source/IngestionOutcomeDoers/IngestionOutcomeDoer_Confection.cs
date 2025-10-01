@@ -36,10 +36,20 @@ namespace VanillaCookingExpandedBakery
                 }
                 if (moodMax != 0)
                 {
-                    Thought_Memory chosenMemory = pawn.needs.mood.thoughts.memories.Memories.Where(x => x.moodOffset < 0 && x.moodOffset >= moodMax)?.RandomElement();
-                    if (chosenMemory != null) {
-                        pawn.needs.mood.thoughts.memories.RemoveMemory(chosenMemory);
+                  
+                    List<Thought_Memory> chosenMemories = pawn.needs.mood.thoughts.memories.Memories.Where(x => x.MoodOffset() < 0 && x.MoodOffset() >= moodMax).ToList();
+                  
+                    if (chosenMemories.Count > 0)
+                    {
+                        Thought_Memory chosenMemory = chosenMemories.RandomElement();
+                       
+                        if (chosenMemory != null)
+                        {
+                            pawn.needs.mood.thoughts.memories.RemoveMemory(chosenMemory);
+                        }
                     }
+                    pawn.health?.AddHediff(InternalDefOf.VCE_ConsumedConfection);
+                    
 
                 }
 

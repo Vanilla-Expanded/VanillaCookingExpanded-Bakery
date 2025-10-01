@@ -17,7 +17,6 @@
 			<Flammability>1.0</Flammability>
 			<Beauty>0</Beauty>
 			<MarketValue>20</MarketValue>
-			<WorkToMake>300</WorkToMake>
 			<Nutrition>0.2</Nutrition>
 			<Mass>0.44</Mass>
 			<DeteriorationRate>10</DeteriorationRate>
@@ -26,9 +25,7 @@
 		<thingCategories>
 			<li>FoodMeals</li>
 		</thingCategories>
-		<tradeTags Inherit="False">
-			<li>VCE_JunkFood</li>
-		</tradeTags>
+		
 		<ingestible>
 			<chairSearchRadius>9</chairSearchRadius>
 			<preferability>DesperateOnly</preferability>
@@ -61,72 +58,181 @@
 			</li>
 		</comps>
 	</ThingDef>
-	<!--<ThingDef ParentName="MealCooked">
-		<defName>VCE_FineBake</defName>
-		<label>fine bake</label>
-		<description>A complex bake assembled with care from a wide selection of ingredients and flour.</description>
+	<ThingDef ParentName="ResourceBase">
+		<defName>VCE_FineConfection</defName>
+		<label>fine confection</label>
+		<description>Colourful donuts topped with swirls of frosting and sprinkles. A cheerful treat for any occasion.</description>
 		<graphicData>
-			<texPath>Things/Meals/VCE_BakeFine</texPath>
+			<texPath>Things/Item/Meal/VCE_FineConfection</texPath>
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
+		<soundInteract>Standard_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<stackLimit>10</stackLimit>
+		<socialPropernessMatters>true</socialPropernessMatters>
 		<statBases>
-			<MarketValue>20</MarketValue>
-			<WorkToMake>675</WorkToMake>
-			<Nutrition>0.8</Nutrition>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<Beauty>0</Beauty>
+			<MarketValue>25</MarketValue>
+			<Nutrition>0.2</Nutrition>
+			<Mass>0.44</Mass>
+			<DeteriorationRate>10</DeteriorationRate>
 		</statBases>
-		<ingestible>
-			<preferability>MealFine</preferability>
-			<ingestEffect>EatVegetarian</ingestEffect>
-			<tasteThought>AteFineMeal</tasteThought>
-			<ingestSound>Meal_Eat</ingestSound>
-		</ingestible>
-
-	</ThingDef>
-
-	<ThingDef ParentName="MealCooked">
-		<defName>VCE_LavishBake</defName>
-		<label>lavish bake</label>
-		<description>A masterpiece of the culinary arts, this bake nourishes the body, mind, and soul.</description>
-		<graphicData>
-			<texPath>Things/Meals/VCE_BakeLavish</texPath>
-			<graphicClass>Graphic_StackCount</graphicClass>
-		</graphicData>
-		<statBases>
-			<MarketValue>40</MarketValue>
-			<WorkToMake>1200</WorkToMake>
-			<Nutrition>0.9</Nutrition>
-		</statBases>
-		<ingestible>
-			<preferability>MealLavish</preferability>
-			<ingestEffect>EatVegetarian</ingestEffect>
-			<tasteThought>AteLavishMeal</tasteThought>
-			<ingestSound>Meal_Eat</ingestSound>
-		</ingestible>
-
-	</ThingDef>
-
-	<ThingDef ParentName="MealCooked">
-		<defName>VCE_GourmetBake</defName>
-		<label>gourmet bake</label>
-		<thingClass>VEF.Cooking.GourmetMeal</thingClass>
-		<description>A culinary work of art, characterized by refined, even elaborate preparation and presentation of an aesthetically balanced, albeit low quantity bake.</description>
-		<graphicData>
-			<texPath>Things/Meals/VCE_BakeGourmet</texPath>
-			<graphicClass>Graphic_StackCount</graphicClass>
-		</graphicData>
-		<statBases>
-			<MarketValue>70</MarketValue>
-			<WorkToMake>2250</WorkToMake>
-			<Nutrition>0.7</Nutrition>
-		</statBases>
-		<ingestible>
-			<preferability>MealLavish</preferability>
-			<optimalityOffsetHumanlikes>20</optimalityOffsetHumanlikes>
-			<tasteThought>VCE_AteGourmetMeal</tasteThought>
-			<ingestEffect>EatVegetarian</ingestEffect>
-			<ingestSound>Meal_Eat</ingestSound>
-		</ingestible>
+		<tickerType>Rare</tickerType>
+		<thingCategories>
+			<li>FoodMeals</li>
+		</thingCategories>
 		
+		<ingestible>
+			<chairSearchRadius>9</chairSearchRadius>
+			<preferability>DesperateOnly</preferability>
+			<foodType>Processed</foodType>
+			<joy>0</joy>
+			 <tasteThought>AteFineMeal</tasteThought>
+			<drugCategory>Social</drugCategory>
+			<maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+			<defaultNumToIngestAtOnce>1</defaultNumToIngestAtOnce>
+			<ingestSound>Meal_Eat</ingestSound>
+			<ingestEffect>EatVegetarian</ingestEffect>
+			<outcomeDoers>
+				<li Class="VanillaCookingExpandedBakery.IngestionOutcomeDoer_Confection">
+					<mealType>Fine</mealType>
+					
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>4</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_Ingredients"/>
+			<li Class="CompProperties_FoodPoisonable"/>
+			<li Class="CompProperties_Drug">
+				<listOrder>1000</listOrder>
+				<teetotalerCanConsume>true</teetotalerCanConsume>
+				<overdoseSeverityOffset>0.08~0.14</overdoseSeverityOffset>
+			</li>
+		</comps>
 	</ThingDef>
--->
+	<ThingDef ParentName="ResourceBase">
+		<defName>VCE_LavishConfection</defName>
+		<label>lavish confection</label>
+		<description>An assortment of intricately decorated cookies, each iced with bright colors and detailed patterns. More artwork than food, but still delicious.</description>
+		<graphicData>
+			<texPath>Things/Item/Meal/VCE_LavishConfection</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<soundInteract>Standard_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<stackLimit>10</stackLimit>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<Beauty>0</Beauty>
+			<MarketValue>45</MarketValue>
+			<Nutrition>0.2</Nutrition>
+			<Mass>0.44</Mass>
+			<DeteriorationRate>10</DeteriorationRate>
+		</statBases>
+		<tickerType>Rare</tickerType>
+		<thingCategories>
+			<li>FoodMeals</li>
+		</thingCategories>
+		
+		<ingestible>
+			<chairSearchRadius>9</chairSearchRadius>
+			<preferability>DesperateOnly</preferability>
+			<foodType>Processed</foodType>
+			<joy>0</joy>
+			 <tasteThought>AteLavishMeal</tasteThought>
+			<drugCategory>Social</drugCategory>
+			<maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+			<defaultNumToIngestAtOnce>1</defaultNumToIngestAtOnce>
+			<ingestSound>Meal_Eat</ingestSound>
+			<ingestEffect>EatVegetarian</ingestEffect>
+			<outcomeDoers>
+				<li Class="VanillaCookingExpandedBakery.IngestionOutcomeDoer_Confection">
+					<mealType>Lavish</mealType>
+					
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>4</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_Ingredients"/>
+			<li Class="CompProperties_FoodPoisonable"/>
+			<li Class="CompProperties_Drug">
+				<listOrder>1000</listOrder>
+				<teetotalerCanConsume>true</teetotalerCanConsume>
+				<overdoseSeverityOffset>0.08~0.14</overdoseSeverityOffset>
+			</li>
+		</comps>
+	</ThingDef>
+	<ThingDef ParentName="ResourceBase">
+		<defName>VCE_GourmetConfection</defName>
+		<label>gourmet confection</label>
+		<description>A plate of lavishly decorated cupcakes, each topped with elaborate frosting and sweet embellishments. A true showcase of creative baking.</description>
+		<graphicData>
+			<texPath>Things/Item/Meal/VCE_GourmetConfection</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<soundInteract>Standard_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<stackLimit>10</stackLimit>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<statBases>
+			<MaxHitPoints>50</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+			<Beauty>0</Beauty>
+			<MarketValue>75</MarketValue>
+			<Nutrition>0.2</Nutrition>
+			<Mass>0.44</Mass>
+			<DeteriorationRate>10</DeteriorationRate>
+		</statBases>
+		<tickerType>Rare</tickerType>
+		<thingCategories>
+			<li>FoodMeals</li>
+		</thingCategories>
+		
+		<ingestible>
+			<chairSearchRadius>9</chairSearchRadius>
+			<preferability>DesperateOnly</preferability>
+			<foodType>Processed</foodType>
+			<joy>0</joy>
+			<tasteThought>VCE_AteGourmetMeal</tasteThought>
+			<drugCategory>Social</drugCategory>
+			<maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+			<defaultNumToIngestAtOnce>1</defaultNumToIngestAtOnce>
+			<ingestSound>Meal_Eat</ingestSound>
+			<ingestEffect>EatVegetarian</ingestEffect>
+			<outcomeDoers>
+				<li Class="VanillaCookingExpandedBakery.IngestionOutcomeDoer_Confection">
+					<mealType>Gourmet</mealType>
+					
+				</li>
+			</outcomeDoers>
+		</ingestible>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>4</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+			<li Class="CompProperties_Forbiddable"/>
+			<li Class="CompProperties_Ingredients"/>
+			<li Class="CompProperties_FoodPoisonable"/>
+			<li Class="CompProperties_Drug">
+				<listOrder>1000</listOrder>
+				<teetotalerCanConsume>true</teetotalerCanConsume>
+				<overdoseSeverityOffset>0.08~0.14</overdoseSeverityOffset>
+			</li>
+		</comps>
+	</ThingDef>
 </Defs>
