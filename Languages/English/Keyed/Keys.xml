@@ -12,4 +12,6 @@
 	<VCE_LavishMealMoodDesc>Ingesting a lavish confection will remove a negative memory up to this severity. -10 by default. 0 will disable the mechanic for that meal.</VCE_LavishMealMoodDesc>
 	<VCE_GourmetMealMood>Max negative memory removed by gourmet confections</VCE_GourmetMealMood>
 	<VCE_GourmetMealMoodDesc>Ingesting a gourmet confection will remove a negative memory up to this severity. -15 by default. 0 will disable the mechanic for that meal.</VCE_GourmetMealMoodDesc>
+	<VCE_TicksForEffect>Period before the "consumed confection" effect wanes</VCE_TicksForEffect>
+	<VCE_TicksForEffectDesc>By default, consuming a confection gives a 3 day period where consuming other confections doesn't make them nullify any negative memories.</VCE_TicksForEffectDesc>
 </LanguageData>

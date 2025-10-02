@@ -25,6 +25,9 @@ namespace VanillaCookingExpandedBakery
         public const int gourmetMealMoodBase = 15;
         public static int gourmetMealMood = gourmetMealMoodBase;
 
+        public const int ticksForEffectBase = 180000;
+        public static int ticksForEffect = ticksForEffectBase;
+
         private static Vector2 scrollPosition = Vector2.zero;
 
 
@@ -37,6 +40,7 @@ namespace VanillaCookingExpandedBakery
             Scribe_Values.Look<int>(ref fineMealMood, "fineMealMood", fineMealMoodBase, true);
             Scribe_Values.Look<int>(ref lavishMealMood, "lavishMealMood", lavishMealMoodBase, true);
             Scribe_Values.Look<int>(ref gourmetMealMood, "gourmetMealMood", gourmetMealMoodBase, true);
+            Scribe_Values.Look<int>(ref ticksForEffect, "ticksForEffect", ticksForEffectBase, true);
 
         }
 
@@ -92,6 +96,14 @@ namespace VanillaCookingExpandedBakery
             if (ls2.Settings_Button("VCE_Reset".Translate(), new Rect(0f, gourmetLabel.position.y + 35, 250f, 29f)))
             {
                 gourmetMealMood = gourmetMealMoodBase;
+            }
+
+            var ticksLabel = ls2.LabelPlusButton("VCE_TicksForEffect".Translate() + ": " + ticksForEffect.ToStringTicksToDays(), "VCE_TicksForEffectDesc".Translate());
+            ticksForEffect = (int)Math.Round(ls2.Slider(ticksForEffect, 0f, 600000f), 0);
+
+            if (ls2.Settings_Button("VCE_Reset".Translate(), new Rect(0f, ticksLabel.position.y + 35, 250f, 29f)))
+            {
+                ticksForEffect = ticksForEffectBase;
             }
 
 

@@ -12,8 +12,8 @@
 		<initialSeverity>1.0</initialSeverity>
 		<maxSeverity>1.0</maxSeverity>
 		<comps>
-			<li Class="HediffCompProperties_Disappears">
-				<disappearsAfterTicks>180000~180000</disappearsAfterTicks>
+			<li Class="VanillaCookingExpandedBakery.HediffCompProperties_DisappearsConfigurable">
+			
 				<showRemainingTime>true</showRemainingTime>
 			</li>
 		</comps>
