@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	
+	<ThingCategoryDef>
+		<defName>VCE_CakeBatters</defName>
+		<label>cake batters</label>
+		<parent>Foods</parent>
+		<resourceReadoutRoot>true</resourceReadoutRoot>
+		<iconPath>Things/Item/Resource/VCE_NormalCakeBatter</iconPath>
+	</ThingCategoryDef>
+</Defs>

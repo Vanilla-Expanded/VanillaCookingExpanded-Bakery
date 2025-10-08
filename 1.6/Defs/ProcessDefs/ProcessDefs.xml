@@ -3,20 +3,18 @@
 	<PipeSystem.ProcessDef>
 		<defName>VCE_BakeSimpleConfection</defName>
 		<label>Bake simple confections</label>
-		<description>Turns 40 flour and 10 sugar into 4 simple confections.</description>
-		<labelOverride>Turn 40 flour and 10 sugar into 4 simple confections.</labelOverride>
+		<description>Turns cake batter into 4 simple confections.</description>
+		<labelOverride>Turn cake batter into 4 simple confections.</labelOverride>
 		<priorityInBillList>0</priorityInBillList>
 		<spawnOnInteractionCell>true</spawnOnInteractionCell>
 		<useIngredients>true</useIngredients>
+		<transfersIngredientList>true</transfersIngredientList>
 		<ingredients>
 			<li>
-				<thing>VCE_Flour</thing>
-				<countNeeded>40</countNeeded>
+				<thing>VCE_NormalCakeBatter</thing>
+				<countNeeded>1</countNeeded>
 			</li>
-			<li>
-				<thing>VCE_RawSugar</thing>
-				<countNeeded>10</countNeeded>
-			</li>
+			
 		</ingredients>
 		<ticks>1200</ticks>
 		<results>
@@ -33,24 +31,22 @@
 	<PipeSystem.ProcessDef>
 		<defName>VCE_BakeFineConfection</defName>
 		<label>Bake fine confections</label>
-		<description>Turns 40 flour, 20 milk and 10 sugar into 4 fine confections.</description>
-		<labelOverride>Turn 40 flour, 20 milk and 10 sugar into 4 fine confections.</labelOverride>
+		<description>Turns cake batter and 20 milk into 4 fine confections.</description>
+		<labelOverride>Turn cake batter and 20 milk into 4 fine confections.</labelOverride>
 		<priorityInBillList>0</priorityInBillList>
 		<spawnOnInteractionCell>true</spawnOnInteractionCell>
 		<useIngredients>true</useIngredients>
+		<transfersIngredientList>true</transfersIngredientList>
 		<ingredients>
 			<li>
-				<thing>VCE_Flour</thing>
-				<countNeeded>40</countNeeded>
+				<thing>VCE_NormalCakeBatter</thing>
+				<countNeeded>1</countNeeded>
 			</li>
 			<li>
 				<thing>Milk</thing>
 				<countNeeded>20</countNeeded>
 			</li>
-			<li>
-				<thing>VCE_RawSugar</thing>
-				<countNeeded>10</countNeeded>
-			</li>
+			
 		</ingredients>
 		<ticks>2000</ticks>
 		<results>
@@ -67,24 +63,22 @@
 	<PipeSystem.ProcessDef>
 		<defName>VCE_BakeLavishConfection</defName>
 		<label>Bake lavish confections</label>
-		<description>Turns 40 flour, 40 vegetables, 20 milk and 10 sugar into 4 lavish confections.</description>
-		<labelOverride>Turn 40 flour, 40 vegetables, 20 milk and 10 sugar into 4 lavish confections.</labelOverride>
+		<description>Turns cake batter, 40 vegetables and 20 milk into 4 lavish confections.</description>
+		<labelOverride>Turn cake batter, 40 vegetables and 20 milk into 4 lavish confections.</labelOverride>
 		<priorityInBillList>0</priorityInBillList>
 		<spawnOnInteractionCell>true</spawnOnInteractionCell>
 		<useIngredients>true</useIngredients>
+		<transfersIngredientList>true</transfersIngredientList>
 		<ingredients>
 			<li>
-				<thing>VCE_Flour</thing>
-				<countNeeded>40</countNeeded>
+				<thing>VCE_NormalCakeBatter</thing>
+				<countNeeded>1</countNeeded>
 			</li>
 			<li>
 				<thing>Milk</thing>
 				<countNeeded>20</countNeeded>
 			</li>
-			<li>
-				<thing>VCE_RawSugar</thing>
-				<countNeeded>10</countNeeded>
-			</li>
+			
 			<li>
 				<thingCategory>PlantFoodRaw</thingCategory>
 				<countNeeded>40</countNeeded>
@@ -105,35 +99,27 @@
 	<PipeSystem.ProcessDef>
 		<defName>VCE_BakeGourmetConfection</defName>
 		<label>Bake gourmet confection</label>
-		<description>Turns 40 flour, 40 vegetables, 20 milk and 10 sugar and a condiment into 1 gourmet confection.</description>
-		<labelOverride>Turn 40 flour, 40 vegetables, 20 milk and 10 sugar and a condiment into 1 gourmet confection.</labelOverride>
+		<description>Turns gourmet cake batter, 40 vegetables and 20 milk into 1 gourmet confection.</description>
+		<labelOverride>Turn gourmet cake batter, 40 vegetables and 20 milk into 1 gourmet confection.</labelOverride>
 		<priorityInBillList>0</priorityInBillList>
 		<spawnOnInteractionCell>true</spawnOnInteractionCell>
 		<useIngredients>true</useIngredients>
+		<transfersIngredientList>true</transfersIngredientList>
 		<ingredients>
 			<li>
-				<thing>VCE_Flour</thing>
-				<countNeeded>40</countNeeded>
+				<thing>VCE_GourmetCakeBatter</thing>
+				<countNeeded>1</countNeeded>
 			</li>
 			<li>
 				<thing>Milk</thing>
 				<countNeeded>20</countNeeded>
 			</li>
-			<li>
-				<thing>VCE_RawSugar</thing>
-				<countNeeded>10</countNeeded>
-			</li>
+			
 			<li>
 				<thingCategory>PlantFoodRaw</thingCategory>
 				<countNeeded>40</countNeeded>
 			</li>
-			<li>
-				<thingCategory>VCE_Condiments</thingCategory>
-				<countNeeded>1</countNeeded>
-				<disallowedThingDefs>
-					<li>VCE_RawSugar</li>
-				</disallowedThingDefs>
-			</li>
+			
 		</ingredients>
 		<ticks>1500</ticks>
 		<results>

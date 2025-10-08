@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+	<RecipeDef Name="VCE_CookCakeBatterBase" Abstract="True">
+		<fixedIngredientFilter>
+			
+			<thingDefs>
+				<li>VCE_Flour</li>
+				<li>VCE_RawSugar</li>
+			</thingDefs>
+			
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			
+			<thingDefs>
+				<li>VCE_Flour</li>
+				<li>VCE_RawSugar</li>
+			</thingDefs>
+			
+		</defaultIngredientFilter>
+		<workSkill>Cooking</workSkill>
+	</RecipeDef>
+
+	<RecipeDef Name="VCE_CookGourmetCakeBatterBase" Abstract="True">
+		<fixedIngredientFilter>
+			<categories>
+			
+				<li>VCE_Condiments</li>
+			</categories>
+			<thingDefs>
+				<li>VCE_Flour</li>
+				<li>VCE_RawSugar</li>
+			</thingDefs>
+			
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<categories>
+			
+				<li>VCE_Condiments</li>
+			</categories>
+			<thingDefs>
+				<li>VCE_Flour</li>
+				<li>VCE_RawSugar</li>
+			</thingDefs>
+		</defaultIngredientFilter>
+		<workSkill>Cooking</workSkill>
+	</RecipeDef>
+
+	<RecipeDef ParentName="VCE_CookCakeBatterBase">
+		<defName>VCE_CookCakeBatter</defName>
+		<label>mix cake batter</label>
+		<description>Mix some cake butter to act as a base for a baked confection.</description>
+		<jobString>Mixing cake batter.</jobString>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		
+		<recipeUsers>
+			<li>ElectricStove</li>	
+			<li>FueledStove</li>			
+		</recipeUsers>
+
+		<ingredients>
+			
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VCE_Flour</li>
+					</thingDefs>
+				</filter>
+				<count>40</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VCE_RawSugar</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<products>
+			<VCE_NormalCakeBatter>1</VCE_NormalCakeBatter>
+		</products>
+		
+	</RecipeDef>
+
+	<RecipeDef ParentName="VCE_CookGourmetCakeBatterBase">
+		<defName>VCE_CookGourmetCakeBatter</defName>
+		<label>mix gourmet cake batter</label>
+		<description>Mix some gourmet cake butter to act as a base for a baked confection.</description>
+		<jobString>Mixing gourmet cake batter.</jobString>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		
+		<recipeUsers>
+			<li>ElectricStove</li>	
+			<li>FueledStove</li>			
+		</recipeUsers>
+
+		<ingredients>
+			
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VCE_Flour</li>
+					</thingDefs>
+				</filter>
+				<count>40</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>VCE_RawSugar</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+			<li>
+				<filter>
+					<categories>
+						<li>VCE_Condiments</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+			<VCE_GourmetCakeBatter>1</VCE_GourmetCakeBatter>
+		</products>
+		<modExtensions>
+			<li Class="VEF.Cooking.Recipe_Extension">
+				<individualIngredients>true</individualIngredients>
+			</li>
+		</modExtensions>
+	</RecipeDef>
+
+
+
+
+
+
+</Defs>
